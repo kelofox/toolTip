@@ -1,0 +1,15 @@
+blind		百葉窗特效（Blind Effect） 
+bounce		反彈特效（Bounce Effect） 
+clip		剪輯特效（Clip Effect） 
+drop		降落特效（Drop Effect） 
+explode		爆炸特效（Explode Effect）
+fade		淡入淡出特效（Fade Effect） 
+fold		折疊特效（Fold Effect） 
+highlight	突出特效（Highlight Effect） 
+puff		膨脹特效（Puff Effect） 
+pulsate		跳動特效（Pulsate Effect） 
+scale 		縮放特效（Scale Effect） 
+shake		震動特效（Shake Effect） 
+size		尺寸特效（Size Effect） 
+slide		滑動特效（Slide Effect） 
+transfer	轉移特效（Transfer Effect） 

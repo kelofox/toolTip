@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="jquery-ui.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+<script src="jquery-ui.js"></script>
+<title>ToolTip Practice</title>
+<script>
+$(document).ready(function(){
+   //＊注意:對於disabled的物件不起作用
+   //$( document ).tooltip();
+   $("#loginBtn" ).tooltip({
+	  //tip內容
+	  content: "Awesome title!",
+	  //指定作用的物件,預設為[title]...即tag裡面有title屬性的才有作用
+	  items: "input",
+	  //位置設定
+	  position: { my: "left top+15", at: "left bottom", collision: "flipfit" },
+	  //消失特效(effect:特效,duration:秒數)
+	  hide: { effect: "fade", duration: 1000 },
+	  //顯示特效(effect:特效,duration:秒數)
+	  show: { effect: "fade", duration: 1000 },
+	  //是否跟隨滑鼠移動:true/false
+	  track: false,
+	  //tip css樣式class,未設定時為預設樣式,有設定時還是以預設樣式為基礎作更動
+	  tooltipClass: "warning"
+	});
+	var count=0;
+	$("#loginBtn" ).click(function(){
+		count++;
+		if(count % 2 == 1){
+			$(this).tooltip("disable");
+		}else{
+			$(this).tooltip("enable");
+		}
+		
+	});
+});
+</script>
+<style type="text/css">
+/* overwrite 預設樣式 */
+.ui-tooltip {
+    padding: 10px 20px;
+    border-radius: 20px;
+    font: bold 14px"Helvetica Neue", Sans-Serif;
+    text-transform: uppercase;
+    box-shadow: 0 0 7px black;
+}
+.ui-tooltip.warning {
+    color: #E3E8F7;
+    background: #D94AA4;
+}
+.ui-tooltip.danger {
+    color: #212942;
+    background: #CABA75;
+}
+</style>
+</head>
+<body>
+	<br/>
+	<br/>
+	<div style="margin-left: 100px"><input id="loginBtn" type="submit" value="login" ></div>
+</body>
+</html>
